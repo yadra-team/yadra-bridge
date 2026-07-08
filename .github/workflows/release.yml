@@ -1,0 +1,68 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  release:
+    name: Build, publish, release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - name: Verify VERSION matches tag
+        env:
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          TAG="${REF_NAME#v}"
+          FILE="$(tr -d '[:space:]' < VERSION)"
+          test "$TAG" = "$FILE"
+      - name: Full test suite
+        run: |
+          go test -race -count=1 ./...
+          go test -race -count=1 -tags=integration ./internal/integration/...
+      - name: Security scans
+        run: |
+          go install github.com/securego/gosec/v2/cmd/gosec@latest
+          gosec -quiet ./...
+          go install golang.org/x/vuln/cmd/govulncheck@latest
+          govulncheck ./...
+      - name: Build linux binary
+        env:
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          VER="${REF_NAME#v}"
+          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+            go build -ldflags="-s -w -X github.com/yarda-team/yadra-bridge/internal/version.Version=${VER}" \
+            -o yadra-bridge-linux-amd64 ./cmd/proxy
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/yarda-team/yadra-bridge:${{ github.ref_name }}
+            ghcr.io/yarda-team/yadra-bridge:latest
+          build-args: VERSION=${{ github.ref_name }}
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: yadra-bridge-linux-amd64
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,24 @@
+services:
+  proxy:
+    build: .
+    ports:
+      - "8090:8090"
+    env_file:
+      - .env
+    environment:
+      CORE_PLATFORM_URL: http://core-api:8080
+      REDIS_ADDR: redis:6379
+      PROXY_PORT: "8090"
+    networks:
+      - yadra-core
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    networks:
+      - yadra-core
+
+networks:
+  yadra-core:
+    external: true
