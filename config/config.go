@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/yarda-team/yadra-bridge/internal/redact"
+	"github.com/yadra-team/yadra-bridge/internal/redact"
 )
 
 type Config struct {

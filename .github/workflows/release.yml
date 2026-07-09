@@ -42,7 +42,7 @@ jobs:
         run: |
           VER="${REF_NAME#v}"
           CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
-            go build -ldflags="-s -w -X github.com/yarda-team/yadra-bridge/internal/version.Version=${VER}" \
+            go build -ldflags="-s -w -X github.com/yadra-team/yadra-bridge/internal/version.Version=${VER}" \
             -o yadra-bridge-linux-amd64 ./cmd/proxy
       - uses: docker/setup-buildx-action@v3
       - uses: docker/login-action@v3
@@ -56,8 +56,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/yarda-team/yadra-bridge:${{ github.ref_name }}
-            ghcr.io/yarda-team/yadra-bridge:latest
+            ghcr.io/yadra-team/yadra-bridge:${{ github.ref_name }}
+            ghcr.io/yadra-team/yadra-bridge:latest
           build-args: VERSION=${{ github.ref_name }}
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

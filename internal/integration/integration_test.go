@@ -19,12 +19,12 @@ import (
 	"github.com/google/uuid"
 	"github.com/redis/go-redis/v9"
 	"github.com/rs/zerolog"
-	"github.com/yarda-team/yadra-bridge/internal/auth"
-	"github.com/yarda-team/yadra-bridge/internal/coreclient"
-	"github.com/yarda-team/yadra-bridge/internal/handler"
-	"github.com/yarda-team/yadra-bridge/internal/ratelimit"
-	"github.com/yarda-team/yadra-bridge/internal/redact"
-	"github.com/yarda-team/yadra-bridge/internal/router"
+	"github.com/yadra-team/yadra-bridge/internal/auth"
+	"github.com/yadra-team/yadra-bridge/internal/coreclient"
+	"github.com/yadra-team/yadra-bridge/internal/handler"
+	"github.com/yadra-team/yadra-bridge/internal/ratelimit"
+	"github.com/yadra-team/yadra-bridge/internal/redact"
+	"github.com/yadra-team/yadra-bridge/internal/router"
 )
 
 func TestIntegrationChatFlow(t *testing.T) {

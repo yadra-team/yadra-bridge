@@ -8,7 +8,7 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
-	"github.com/yarda-team/yadra-bridge/internal/auth"
+	"github.com/yadra-team/yadra-bridge/internal/auth"
 )
 
 const testIssuer = "https://api.yadra.app"

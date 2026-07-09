@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/yarda-team/yadra-bridge/internal/apierr"
+	"github.com/yadra-team/yadra-bridge/internal/apierr"
 )
 
 func TestErrorResponseShape(t *testing.T) {

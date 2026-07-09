@@ -1,6 +1,6 @@
 # Yadra Bridge
 
-[![CI](https://github.com/yarda-team/yadra-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/yarda-team/yadra-bridge/actions/workflows/ci.yml)
+[![CI](https://github.com/yadra-team/yadra-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/yadra-team/yadra-bridge/actions/workflows/ci.yml)
 
 Open-source [**BUSL 1.1**](LICENSE) Go service that routes authenticated Proxy Mode AI requests to providers configured by admins in Yadra Hub (Core Platform).
 

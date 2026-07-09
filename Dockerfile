@@ -5,7 +5,7 @@ RUN go mod download
 COPY . .
 ARG VERSION=0.1.0
 RUN CGO_ENABLED=0 go build \
-    -ldflags="-s -w -X github.com/yarda-team/yadra-bridge/internal/version.Version=${VERSION}" \
+    -ldflags="-s -w -X github.com/yadra-team/yadra-bridge/internal/version.Version=${VERSION}" \
     -o /proxy ./cmd/proxy
 
 FROM alpine:3.20

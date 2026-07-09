@@ -80,7 +80,7 @@ jobs:
         with:
           context: .
           push: false
-          tags: ghcr.io/yarda-team/yadra-bridge:${{ steps.ver.outputs.version }}
+          tags: ghcr.io/yadra-team/yadra-bridge:${{ steps.ver.outputs.version }}
           build-args: VERSION=${{ steps.ver.outputs.version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

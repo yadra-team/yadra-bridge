@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/rs/zerolog"
-	"github.com/yarda-team/yadra-bridge/internal/yadmanifest"
+	"github.com/yadra-team/yadra-bridge/internal/yadmanifest"
 )
 
 func TestYadManifestHandleUnavailable(t *testing.T) {

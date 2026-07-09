@@ -3,7 +3,7 @@ package router_test
 import (
 	"testing"
 
-	"github.com/yarda-team/yadra-bridge/internal/router"
+	"github.com/yadra-team/yadra-bridge/internal/router"
 )
 
 func TestTierAllows(t *testing.T) {

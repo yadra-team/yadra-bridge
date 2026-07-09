@@ -7,7 +7,7 @@ import (
 	"github.com/alicebob/miniredis/v2"
 	"github.com/redis/go-redis/v9"
 	"github.com/rs/zerolog"
-	"github.com/yarda-team/yadra-bridge/internal/ratelimit"
+	"github.com/yadra-team/yadra-bridge/internal/ratelimit"
 )
 
 func TestLimiterAllowsUnderMinuteCap(t *testing.T) {

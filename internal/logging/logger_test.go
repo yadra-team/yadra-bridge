@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/yarda-team/yadra-bridge/internal/logging"
+	"github.com/yadra-team/yadra-bridge/internal/logging"
 )
 
 func TestLoggerMetadataOnlyShape(t *testing.T) {

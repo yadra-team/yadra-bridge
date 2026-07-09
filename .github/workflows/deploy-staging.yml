@@ -33,6 +33,6 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/yarda-team/yadra-bridge:${{ steps.ver.outputs.version }}-staging
-            ghcr.io/yarda-team/yadra-bridge:staging
+            ghcr.io/yadra-team/yadra-bridge:${{ steps.ver.outputs.version }}-staging
+            ghcr.io/yadra-team/yadra-bridge:staging
           build-args: VERSION=${{ steps.ver.outputs.version }}

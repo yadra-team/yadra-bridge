@@ -60,5 +60,5 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Rejects inactive subscriptions at JWT validation layer
 - No message content in logs or usage events
 
-[0.2.0]: https://github.com/yarda-team/yadra-bridge/releases/tag/v0.2.0
-[0.1.0]: https://github.com/yarda-team/yadra-bridge/releases/tag/v0.1.0
+[0.2.0]: https://github.com/yadra-team/yadra-bridge/releases/tag/v0.2.0
+[0.1.0]: https://github.com/yadra-team/yadra-bridge/releases/tag/v0.1.0

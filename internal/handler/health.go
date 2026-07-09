@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/yarda-team/yadra-bridge/internal/auth"
-	"github.com/yarda-team/yadra-bridge/internal/coreclient"
-	"github.com/yarda-team/yadra-bridge/internal/ratelimit"
-	"github.com/yarda-team/yadra-bridge/internal/version"
-	"github.com/yarda-team/yadra-bridge/internal/yadmanifest"
+	"github.com/yadra-team/yadra-bridge/internal/auth"
+	"github.com/yadra-team/yadra-bridge/internal/coreclient"
+	"github.com/yadra-team/yadra-bridge/internal/ratelimit"
+	"github.com/yadra-team/yadra-bridge/internal/version"
+	"github.com/yadra-team/yadra-bridge/internal/yadmanifest"
 )
 
 type ReadyDeps struct {

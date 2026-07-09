@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/yarda-team/yadra-bridge/internal/apierr"
+	"github.com/yadra-team/yadra-bridge/internal/apierr"
 )
 
 type ctxKey int

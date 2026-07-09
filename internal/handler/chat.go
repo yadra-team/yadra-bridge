@@ -10,12 +10,12 @@ import (
 	"time"
 
 	"github.com/rs/zerolog"
-	"github.com/yarda-team/yadra-bridge/internal/apierr"
-	"github.com/yarda-team/yadra-bridge/internal/auth"
-	"github.com/yarda-team/yadra-bridge/internal/coreclient"
-	"github.com/yarda-team/yadra-bridge/internal/ratelimit"
-	"github.com/yarda-team/yadra-bridge/internal/redact"
-	"github.com/yarda-team/yadra-bridge/internal/router"
+	"github.com/yadra-team/yadra-bridge/internal/apierr"
+	"github.com/yadra-team/yadra-bridge/internal/auth"
+	"github.com/yadra-team/yadra-bridge/internal/coreclient"
+	"github.com/yadra-team/yadra-bridge/internal/ratelimit"
+	"github.com/yadra-team/yadra-bridge/internal/redact"
+	"github.com/yadra-team/yadra-bridge/internal/router"
 )
 
 type Chat struct {

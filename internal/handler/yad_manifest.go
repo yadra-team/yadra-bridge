@@ -5,8 +5,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/yarda-team/yadra-bridge/internal/apierr"
-	"github.com/yarda-team/yadra-bridge/internal/yadmanifest"
+	"github.com/yadra-team/yadra-bridge/internal/apierr"
+	"github.com/yadra-team/yadra-bridge/internal/yadmanifest"
 )
 
 type YadManifest struct {

@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/rs/zerolog"
-	"github.com/yarda-team/yadra-bridge/internal/coreclient"
+	"github.com/yadra-team/yadra-bridge/internal/coreclient"
 )
 
 var (

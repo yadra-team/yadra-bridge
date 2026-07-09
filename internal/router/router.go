@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/yarda-team/yadra-bridge/internal/coreclient"
+	"github.com/yadra-team/yadra-bridge/internal/coreclient"
 )
 
 var tierRank = map[string]int{

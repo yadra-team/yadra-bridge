@@ -1,4 +1,4 @@
-module github.com/yarda-team/yadra-bridge
+module github.com/yadra-team/yadra-bridge
 
 go 1.23.0
 
