@@ -1,0 +1,23 @@
+name: AI Governance
+
+on:
+  push:
+    branches: [main, preprod, production]
+  pull_request:
+    branches: [main, preprod, production]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify AI governance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Verify AI governance files
+        run: bash scripts/verify-ai-governance.sh

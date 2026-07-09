@@ -1,0 +1,7 @@
+---
+alwaysApply: true
+---
+
+# Yadra Repository Cursor Rule
+
+Use `AGENTS.md` as the canonical instruction file for this repository. Run repository validation before commit or push.
