@@ -1,0 +1,29 @@
+name: Engineering task
+description: Track scoped maintenance, refactor, docs, or infrastructure work.
+title: "chore: "
+labels: ["type: task", "needs triage"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this task needed now?
+    validations:
+      required: true
+  - type: textarea
+    id: work
+    attributes:
+      label: Work to do
+      placeholder: |
+        - ...
+        - ...
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: Commands, checks, or review criteria that prove this is done.
+    validations:
+      required: true
+

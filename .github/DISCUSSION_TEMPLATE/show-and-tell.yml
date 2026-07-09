@@ -1,0 +1,14 @@
+title: "[Show and tell] "
+labels: ["discussion: showcase"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What did you build or try?
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes, screenshots, or links
+
